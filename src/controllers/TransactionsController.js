@@ -25,6 +25,7 @@ class TransactionsController {
 
         const schema = Yup.object({
             cartCode: Yup.string().required(),
+            paymentType: Yup.mixed().oneOf(["credit_card", "billet"]).required()
         })
         if (!(await schema.isValid(req.body))) {
             return res.status(400).json({
