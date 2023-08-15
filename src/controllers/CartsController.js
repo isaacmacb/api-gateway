@@ -19,6 +19,7 @@ class CartsController {
     async create(req, res) {
         try {
             const { code, price } = req.body;
+
             const cart = await Cart.create({ code, price });
             return res.status(201).json(cart);
         } catch (error) {

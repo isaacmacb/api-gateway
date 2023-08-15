@@ -46,8 +46,38 @@ const schema = new mongoose.Schema(
     transcationId: {
         type:String
     },
-    processorRespons : {
-        
+    processorResponse : {
+          type: String,
+    },
+    customerEmail: {
+      type: String
+    },
+    customerName: {
+      type: String
+    },
+    customerMobile: {
+      type: String
+    },
+    customerDocument: {
+      type: String
+    },
+    billingAddress: {
+      type:String
+    },
+    billingNumber: {
+      type:String
+    },
+    billingNeighborhood: {
+      type:String
+    },
+    billingCity: {
+      type:String
+    },
+    billingStates: {
+      type:String
+    },
+    billingZipCode: {
+      type:String
     },
   },
   {
