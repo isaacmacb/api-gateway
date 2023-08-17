@@ -1,5 +1,7 @@
 import Cart from "../modes/Cart";
 import Transaction from "../modes/Transaction";
+import { v4 as uuidv4 } from 'uuid';
+
 class TransactionService {
   async process({
     cartCode,
@@ -29,9 +31,10 @@ class TransactionService {
       billingNumber: billing.Number,
       billingNeighborhood: billing.neighborhood,
       billingCity: billing.city,
-      billingState: billing.states,
+      billingState: billing.billingState,
       billingZipCode: billing.zipcode,
     });
+    
     return transaction;
   }
 }

@@ -73,7 +73,7 @@ const schema = new mongoose.Schema(
     billingCity: {
       type:String
     },
-    billingStates: {
+    billingState: {
       type:String
     },
     billingZipCode: {
